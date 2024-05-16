@@ -15,10 +15,6 @@ class MainPage(BasePage):
     def click_yandex_logo(self):
         self.click_on_element(MainPageLocators.LOGO_YANDEX)
 
-    @allure.step('Переключиться на другую вкладку браузера')
-    def go_to_next_tab(self):
-        self.driver.switch_to.window(self.driver.window_handles[1])
-
     @allure.step('Подождать загрузки страницы Дзен')
     def wait_for_dzen_url(self):
         self.waiting_for_url(Urls.DZEN_PAGE_URL)
